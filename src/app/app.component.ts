@@ -9,9 +9,12 @@ export class AppComponent  {
 
 formbuilderValue:boolean=false;
 reactiveFormsValue:boolean=false;
+formArrayValue:boolean=false;
+
+
 reactiveFormClicks:number=0;
 formBuilderFormClick:number=0
-
+formArrayClick:number=0;
 
 reactiveForms(){
  this.reactiveFormClicks++
@@ -36,6 +39,18 @@ else{
   this.formbuilderValue=false;
 }
 
+}
+
+
+formArray(){
+this.formArrayClick++;
+if(this.formArrayClick%2===1){
+this.formArrayValue=true;
+}
+else{
+  this.formArrayValue=false;
+  
+}
 }
     
 }

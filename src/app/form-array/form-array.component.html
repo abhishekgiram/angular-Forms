@@ -1,0 +1,16 @@
+
+
+
+<form [formGroup]="customerProducts">
+  <div
+    formArrayName="items"
+    *ngFor="let item of customerProducts.get('items')['controls']; let i = index;"
+  >
+    <div [formGroupName]="i">
+      <input formControlName="price" placeholder="Item price">
+      <input formControlName="description" placeholder="Item description">
+      <input formControlName="qty" placeholder="Item quantity">
+    </div>
+  </div>
+  <button type="button" (click)="addItem()">Add Item</button>
+</form>
