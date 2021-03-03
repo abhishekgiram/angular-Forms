@@ -1,6 +1,10 @@
 <div>
   <button (click)="reactiveForms()">Reactive Forms</button>
-  <div *ngIf="reactiveFormsValue">
+  <div *ngIf="reactiveFormsValue ">
   <app-reactive-forms></app-reactive-forms>
+  </div>
+  <button (click)="formBuilder()"> Form builder validations</button>
+  <div *ngIf="formbuilderValue ">
+  <app-form-builder></app-form-builder>
   </div>
 </div>

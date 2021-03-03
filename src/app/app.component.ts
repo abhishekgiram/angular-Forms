@@ -6,8 +6,13 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+formbuilderValue:boolean=false;
 reactiveFormsValue:boolean=false;
 reactiveFormClicks:number=0;
+formBuilderFormClick:number=0
+
+
 reactiveForms(){
  this.reactiveFormClicks++
  if(this.reactiveFormClicks%2===1){
@@ -17,4 +22,20 @@ reactiveForms(){
 this.reactiveFormsValue=false;
  }
 } 
+
+formBuilder(){
+this.reactiveFormClicks++;
+console.log(this.formbuilderValue)
+console.log(this.reactiveFormClicks);
+
+if(this.reactiveFormClicks %2 === 1){
+  this.formbuilderValue=true;
+  console.log(this.formbuilderValue)
+}
+else{
+  this.formbuilderValue=false;
+}
+
+}
+    
 }
