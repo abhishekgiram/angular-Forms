@@ -6,5 +6,15 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+reactiveFormsValue:boolean=false;
+reactiveFormClicks:number=0;
+reactiveForms(){
+ this.reactiveFormClicks++
+ if(this.reactiveFormClicks%2===1){
+  this.reactiveFormsValue=true;
+ }
+ else{
+this.reactiveFormsValue=false;
+ }
+} 
 }

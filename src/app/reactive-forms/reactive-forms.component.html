@@ -1,0 +1,40 @@
+Reactive Forms
+<!--<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+<p>
+  name: {{name.value}}
+</p>
+-->
+<form [formGroup]="informationForm" (ngSubmit)="onsubmit()"> 
+  <label>Name:
+  <input type="text"  formControlName="name">
+  </label>
+<label>Surname:
+  <input type="text"  formControlName="surname">
+</label>
+<label>
+  phone:
+  <input type="text"  formControlName="phone">
+</label>
+  <div formGroupName="addres">
+  <h3>Address</h3>
+
+  <label>
+    Street:
+    <input type="text" formControlName="street">
+  </label>
+
+  <label>
+    City:
+    <input type="text" formControlName="city">
+  </label>
+  
+</div>
+
+<button type="submit" >Submit</button>
+
+<button (click)="updateValue()">Update values</button>
+
+</form>

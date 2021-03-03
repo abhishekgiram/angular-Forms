@@ -1,4 +1,6 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <button (click)="reactiveForms()">Reactive Forms</button>
+  <div *ngIf="reactiveFormsValue">
+  <app-reactive-forms></app-reactive-forms>
+  </div>
+</div>
